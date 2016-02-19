@@ -1,13 +1,13 @@
 
-from openvpnmon.activity.models import ActivityRegistry
+from activity.models import ActivityRegistry
 from django.contrib import admin
 from django.utils.translation import ugettext, ugettext_lazy as _
 
 
 class ActivityRegistryAdmin(admin.ModelAdmin):
-    list_display = ('label', 'reference', 
-        'start_time', 'end', 'done', 'msg', 
-        'return_code', 'last_update_time', 
+    list_display = ('label', 'reference',
+        'start_time', 'end', 'done', 'msg',
+        'return_code', 'last_update_time',
         'is_active', 'consumed'
     )
     list_filter = ('label', 'reference',)
